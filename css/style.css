@@ -335,6 +335,8 @@ a:focus {
 .shop_section .box {
   background-color: #eeeeee;
   position: relative;
+  overflow: hidden;
+  width: 100%;
   padding: 10px;
   margin-top: 25px;
 }
@@ -363,9 +365,14 @@ a:focus {
   height: 245px;
 }
 
+.box:hover .img-box img {
+  transform: scale(1.1); /* Zoom in effect */
+  transition: transform 0.5s ease; /* Smooth transition */
+}
 .shop_section .box .img-box img {
-  max-width: 100%;
-  max-height: 145px;
+  width:250px;
+  height: auto;
+  
 }
 
 .shop_section .box .detail-box {
@@ -427,9 +434,9 @@ a:focus {
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  transition: -webkit-transform 0.6s ease;
-  transition: transform 0.6s ease;
-  transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+  transition: -webkit-transform 0.30s ease;
+  transition: transform 0.30s ease;
+  transition: transform 0.30s ease, -webkit-transform 0.30s ease;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000px;
@@ -498,7 +505,7 @@ a:focus {
 
 .carousel-fade .carousel-item {
   opacity: 0;
-  transition-duration: .6s;
+  transition-duration: .30s;
   transition-property: opacity;
 }
 
@@ -794,8 +801,11 @@ height: auto;
 
 .contact_section {
   position: relative;
+  background-color: #eeeeee;
 }
-
+.contact_section .map_container{
+  background-color: #f1f3f4;
+}
 .contact_section .container-bg {
   -webkit-box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.1);
@@ -844,11 +854,12 @@ height: auto;
 .contact_section form {
   padding-right: 35px;
   padding: 45px 20px;
+  background-color: #f1f3f4;
 }
 
 .contact_section input {
   width: 100%;
-  border: 1px solid #919191;
+  border: 1px solid black;
   height: 50px;
   margin-bottom: 25px;
   padding-left: 25px;
@@ -1076,16 +1087,27 @@ text-align: center;
   text-transform: none;
 }
 
-.info_section h6 {
+.info_section h6 a {
+  color: #ffffff;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 18px;
   margin-bottom: 25px;
 }
 
+.info_section .follow {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
 .info_section p {
   color: #cbc9c9;
 }
+
+
 
 .info_section .info_link-box a {
   display: -webkit-box;

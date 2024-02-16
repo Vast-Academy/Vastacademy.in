@@ -80,7 +80,13 @@
               </span>
             </a>
             <a href="">
-              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-youtube" aria-hidden="true"></i>
             </a>
             <form class="form-inline ">
               <button class="btn nav_search-btn" type="submit">
@@ -218,7 +224,7 @@ Begin with our starter courses.
                       <div class="box">
                         <a href="">
                           <div class="detail-box">
-                            <h6 style="font-size:16px;">
+                            <h6 style="font-size:25px;">
                               Free
                             <span>
                                Courses
@@ -235,6 +241,12 @@ Begin with our starter courses.
                               Computer
                               </span>
                             </h6>
+                            <h6>
+                              Type:
+                              <span>
+                              Online
+                              </span>
+                            </h6>
                           </div>  
                         </a>
                       </div>
@@ -243,10 +255,10 @@ Begin with our starter courses.
                         <div class="box">
                           <a href="">
                             <div class="detail-box">
-                              <h6 style="font-size:16px;">
-                                Free
+                              <h6 style="font-size:25px;">
+                                Online Live
                               <span>
-                                 Courses
+                                 Classes
                               </span>
                             </h6>
                             </div>
@@ -260,29 +272,10 @@ Begin with our starter courses.
                                 Computer
                                 </span>
                               </h6>
-                            </div>  
-                          </a>
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="box">
-                          <a href="">
-                            <div class="detail-box">
-                              <h6 style="font-size:16px;">
-                                Free
-                              <span>
-                                 Courses
-                              </span>
-                            </h6>
-                            </div>
-                            <div class="img-box">
-                              <img src="images/p3.png" alt="">
-                            </div>
-                            <div class="detail-box">
                               <h6>
-                                Category:
+                                Type:
                                 <span>
-                                Computer
+                                Online
                                 </span>
                               </h6>
                             </div>  
@@ -293,10 +286,38 @@ Begin with our starter courses.
                         <div class="box">
                           <a href="">
                             <div class="detail-box">
-                              <h6 style="font-size:16px;">
-                                Free
+                              <h6 style="font-size:25px;">
+                               Computer
                               <span>
                                  Courses
+                              </span>
+                            </h6>
+                            </div>
+                            <div class="img-box">
+                              <img src="images/p3.png" alt="">
+                            </div>
+                            <div class="detail-box">
+                              <h6>
+                                Certificate-<span>Diploma</span>
+                              </h6>
+                              <h6>
+                                Type:
+                                <span>
+                                In Person
+                                </span>
+                              </h6>
+                            </div>  
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="box">
+                          <a href="">
+                            <div class="detail-box">
+                              <h6 style="font-size:25px;">
+                                Spoken
+                              <span>
+                                 English
                               </span>
                             </h6>
                             </div>
@@ -305,9 +326,15 @@ Begin with our starter courses.
                             </div>
                             <div class="detail-box">
                               <h6>
-                                Category:
+                                Level
                                 <span>
-                                Computer
+                                Based
+                                </span>
+                              </h6>
+                              <h6>
+                                Type:
+                                <span>
+                                In Person
                                 </span>
                               </h6>
                             </div>  
@@ -922,28 +949,31 @@ Begin with our starter courses.
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.49390513267!2d74.94861177562107!3d31.757012374106576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391961c3c2c9062d%3A0xe7cc52c491ff3101!2sVast%20Academy!5e0!3m2!1sen!2sin!4v1707908421077!5m2!1sen!2sin" width="650" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="info">
-              <span> <button><a href="#">Get Directions</a> </button></span>
+              <span> <button><a href="https://maps.app.goo.gl/qQ5SAYvVhFZFgaAq8">Get Directions</a> </button></span>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-5 px-0">
-          <form action="https://formspree.io/f/mnqedzdv/vastacademymajitha@gmail.com" method="POST">
+          <form action="https://formspree.io/f/mnqedzdv" method="POST">
             <div>
-              <input type="text" name="name" placeholder="Name" required/>
+              <input type="text" name="name" placeholder="Name *Required" required/>
             </div>
             <div>
-              <input type="text" name="Phone" placeholder="Phone" required/>
+              <input type="text" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}"  title="Please enter a valid 10-digit phone number" placeholder="10-digit Phone Number *Required" required/>
             </div>
             <div>
-              <input type="email" name="email" placeholder="email">
+              <input type="Email" name="Email" placeholder="Email (Optional)">
             </div>
             <div>
-              Query for:
     <select name="query_type" id="query_type">
-<option value="">--select a query type--</option>
-<option value="visa">Visa</option>
-<option value="Master card">Master Card</option>
-<option value="rupay">Rupay</option>
+<option value="">--select a query type-- *Required</option>
+<option value="Computer Online Course">Computer Online Course</option>
+<option value="Computer Live Classes">Computer Live Classes</option>
+<option value="Computer Walk-in Classes">Computer Walk-in Classes</option>
+<option value="Free Course">Free Course</option>
+<option value="How to Get Certificate">How to Get Certificate </option>
+<option value="Internship">Internship</option>
+<option value="Spoken English">Spoken English</option>
     </select>
             </div>
             <div>
@@ -965,43 +995,34 @@ Begin with our starter courses.
   <!-- info section -->
 
   <section class="info_section  layout_padding2-top">
-    <div class="social_container">
-      <div class="social_box">
-        <a href="">
-          <i class="fa fa-facebook" aria-hidden="true"></i>
-        </a>
-        <a href="">
-          <i class="fa fa-snapchat" aria-hidden="true"></i>
-        </a>
-        <a href="">
-          <i class="fa fa-instagram" aria-hidden="true"></i>
-        </a>
-        <a href="">
-          <i class="fa fa-youtube" aria-hidden="true"></i>
-        </a>
-      </div>
-    </div>
     <div class="info_container ">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 col-lg-3">
-            <h6>
-              ABOUT US
-            </h6>
+          <div class="col-md-6 col-lg-4">
+            <h6> <a href="">ABOUT US</a></h6>
             <p>
-              We transform education by blending theory and hands-on experience. Our vision is to bridge the gap between theoretical knowledge and real-world application, empowering students to excel in the evolving world of technology.
+              Since 2009, our academy has been spreading the word about the value of practical training across the nation. It's been a game-changer for students, helping them quickly apply ......<a href="">Read More</a> 
             </p>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <h6>
-              NEED HELP
+          <div class="col-md-6 col-lg-4">
+            <h6 class="follow">
+              FOLLOW US ON
             </h6>
-            <p>
-              We've Got You Covered at Vast Academy! <br>
-We're here to support you on your learning journey. Connect with us for any assistance – because success starts with the right help!
-            </p>
+            <div class="social_container">
+            <div class="social_box">
+              <a href="https://www.facebook.com/BestpracticalInstituteMajitha?mibextid=ZbWKwL" target="_blank">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.instagram.com/vast_academy_majitha?igsh=MXY5ZHFncTIwd2xsaw==" target="_blank">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.youtube.com/@vastacademy " target="_blank">
+                <i class="fa fa-youtube" aria-hidden="true"></i>
+              </a>
+            </div>
           </div>
-          <div class="col-md-6 col-lg-3">
+          </div>
+          <div class="col-md-6 col-lg-4">
             <h6>
               CONTACT US
             </h6>
