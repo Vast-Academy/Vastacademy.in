@@ -49,6 +49,9 @@
     text-align: left;
 }
 
+.container-img{
+    margin-top: -8px;
+}
 .detail {
     margin-bottom: 10px;
 }
@@ -72,13 +75,7 @@
     color: red;
     text-decoration: line-through;
     font-size:1.2em;
-    font-strong><
-}
-
-.discounted-price {
-    color: #e44d26;
-    font-weight: bold;
-    font-size: 1.2em; /* Adjust font size */
+   
 }
 
 .buttons-container {
@@ -99,7 +96,7 @@
     text-align: left;
     background-color: #f4f4f4;
     padding: 20px;
-    margin-top: 20px;
+    margin-top: 70px;
     border-radius: 10px;
 }
 
@@ -120,21 +117,18 @@
     color: #4CAF50; /* Green color for discounted price */
     font-weight: bold;
     font-size: 1.5em; /* Adjust font size */
-    
+} 
 
-.discounted-price {
-    color: #4CAF50; /* Green color for discounted price */
-    font-weight: bold;
-    font-size: 1.5em; /* Adjust font size */
-    text-decoration: line-through; /* Strikethrough effect */
-}
+
 /* Additional styles for the remaining course sections (Semi Dynamic, Dynamic Custom, Addons Pages) */
-
+.section2{
+    padding-bottom: 10px;
+}
 .section3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 .container-course {
@@ -178,35 +172,8 @@
     margin-top: 20px;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
 
-.address,
-.links,
-.hours {
-    margin-bottom: 20px;
-}
 
-.social-links {
-    list-style-type: none;
-    padding: 0;
-}
-
-.social-links li {
-    display: inline-block;
-    margin-right: 10px;
-}/* Additional styles for the remaining course sections (Semi Dynamic, Dynamic Custom, Addons Pages) */
-
-.section3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
 
 .container-course {
     max-width: 800px;
@@ -233,79 +200,152 @@ footer {
 .duration {
     margin-top: 10px;
     font-weight: bold;
-}
-
-.price {
-    color: red;
-    text-decoration: line-through;
-    font-size: 1.2em;
-}
-
-.actual-price {
-    margin-top: 10px;
-}
-
-.buttons {
-    margin-top: 20px;
-}
-
-.buttons button {
-    margin-right: 10px;
-}
-
-
-.address,
-.links,
-.hours {
-    margin-bottom: 20px;
-}
-
-.social-links {
-    list-style-type: none;
-    padding: 0;
-}
-
-.social-links li {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.social-links a {
-    color: white;
-    font-size: 20px;
-}
-
-.social-links a {
-    color: white;
-    font-size: 20px;
 }
 
 .service-title {
     font-size: 1.8em;
     font-weight: bold;
     margin-top: 10px;
-    border-bottom: 2px solid #333;
     padding-bottom: 10px;
 }
 
-.H1
-{ text-align:center;
-font-size:2em
-font-color:white;
+ .main{
+    text-align:center;
+font-size:2em;
+color:white;
 }
+
+.mobile-navigation {
+    display: none;
+  }
+
+  /* Media query for mobile view */
+  @media only screen and (max-width: 767px) {
+    .mobile-navigation {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #000;
+      /* Set the background color to black */
+      color: #fff;
+      /* Set the text color to white */
+      padding: 15px 0;
+      box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      /* Ensure it's above other elements */
+    }
+
+    .nav-item {
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      /* Set the text color to white */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 25%;
+      /* Set width to 25% for four items in a row */
+      transition: 0.3s;
+      /* Add transition for a smooth effect */
+    }
+
+    .nav-item i {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .nav-item span {
+      font-size: 12px;
+      /* Adjust font size for text */
+    }
+
+    /* Hover effect for better visibility */
+    .nav-item:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      /* Light background on hover */
+      border-radius: 50%;
+      /* Circular shape on hover */
+    }
+  }
 
 </style>
 
 <body>
     <!-- Hero Area and Header Section -->
-    <!-- ... (Your existing HTML for Hero Area and Header Section) -->
-    <h1> WEB SERVICES </H1>
+    <div class="hero_area">
+        <!-- header section strats -->
+        <header class="header_section">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="index.html">
+              <span>
+                Vast Academy
+              </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="courses.html">
+                    Courses
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="services.html">
+                    IT Services
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://aiita.org/study_centre/students_directory">
+                    Check-Online
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+              </ul>
+              <div class="user_option">
+                <a href="https://vacomputers.com/">
+                  <i class="fa fa-exchange" aria-hidden="true"></i>
+                  <span>
+                    VACOMPUTERS.COM
+                  </span>
+                </a>
+                <a href="">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-youtube" aria-hidden="true"></i>
+                </a>
+                <form class="form-inline ">
+                  <button class="btn nav_search-btn" type="submit">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </nav>
+        </header>
+    
+    
     <!-- Course Section -->
     <section class="course">
         <div class="container-sort">
             <select name="sort_by" id="sort_by">
                 <option value="">Sort by: Featured</option>
-                <option value="Duration">Duration</option>
                 <option value="priceAsc">Price - Low to High</option>
                 <option value="priceDesc">Price - High to Low</option>
             </select>
@@ -314,6 +354,7 @@ font-color:white;
 
 <!-- Website Development Section -->
 <section class="section2">
+    <h1 style=" margin-bottom: 20px; text-align:center; background-color:#000; color: #fff; padding: 10px; border-radius: 10px;">WEB SERVICES</h1>
     <div class="service-container">
         <h2 class="service-title">Static Website Development Service</h2>
         <div class="service-details-container">
@@ -321,12 +362,9 @@ font-color:white;
                 <img src="images/p1.png" alt="Static Website Image" class="service-image">
             </div>
             <div class="service-details">
-                <div class="detail duration">
-                    <strong>Duration:</strong> 2 Months
-                </div>
-                <div class="detail trending">
-                    <button class="btn btn-trending">🚀 Trending #1 </button>
-                </div>
+            </div>
+            <div class="service-description">
+                <p>Transform your business presence with our Static Website Development Service that showcases your business profile online, displays your products and services, and includes essential pages like Home, Services, Contact Us, and About Us.</p>
             </div>
             <div class="price-container">
                 <p class="original-price"><i class="fa fa-inr"></i><s>9,999/-</s></p>
@@ -338,15 +376,9 @@ font-color:white;
 
 <div class="buttons-container">
     <button type="button" class="btn btn-primary">Book A Demo</button>
-    <br>
-    <br>
     <button type="button" class="btn btn-danger">Join Service</button>
 </div>
-
-        </div>
-        <div class="service-description">
-            <p>Transform your business presence with our Static Website Development Service that showcases your business profile online, displays your products and services, and includes essential pages like Home, Services, Contact Us, and About Us.</p>
-        </div>
+       
         <div class="service-includes-container">
             <div class="service-includes">
                 <h3 class="includes-heading"><strong>What's included :</strong></h3>
@@ -372,13 +404,7 @@ font-color:white;
             </div>
             <div class="service-details">
                 <p class="course-description">Present your business online and drive footfall with a Semi Dynamic Website. Visitors can easily contact you via the website, and all social media handles will be linked. This mobile-accessible website offers all the benefits of a static site plus extra services, up to 20 products, mobile view, and social media handle attachments.</p>
-                <div class="detail duration">
-                    <strong>Duration:</strong> 3 Months
-                </div>
-                <div class="heading-box trending">
-                    <h6>Trending: 🚀 #3</h6>
-                </div>
-            </div>
+               </div>
             <div class="price-container">
                 <p class="original-price"><i class="fa fa-inr"></i><s>17,999/-</s></p>
                 <p class="discounted-price">Starting Price <i class="fa fa-inr"></i>9,999/-</p>
@@ -411,12 +437,7 @@ font-color:white;
             </div>
             <div class="service-details">
                 <p class="course-description">Take control of your website with the Dynamic Custom Website course. You'll have full access to your website and content, enabling you to add or remove products. This fully-featured website includes all the benefits of a semi-dynamic site plus an admin panel, user panel, and mobile app.</p>
-                <div class="detail duration">
-                    <strong>Duration:</strong> 3 Months
-                </div>
-                <div class="heading-box trending">
-                    <h6>Trending: 🚀 #3</h6>
-                </div>
+                
             </div>
             <div class="price-container">
                 <p class="original-price"><i class="fa fa-inr"></i><s>17,999/-</s></p>
@@ -451,16 +472,10 @@ font-color:white;
             </div>
             <div class="service-details">
                 <p class="course-description">Start your career with a course that offers a syllabus tailored to secure a promising job and build your future. This comprehensive course comes with multiple plans to suit your needs.</p>
-                <div class="detail duration">
-                    <strong>Duration:</strong> 3 Months
-                </div>
-                <div class="heading-box trending">
-                    <h6>Trending: 🚀 #3</h6>
-                </div>
             </div>
             <div class="price-container">
                 <p class="original-price"><i class="fa fa-inr"></i><s>17,999/-</s></p>
-                <!-- Add pricing details for each plan -->
+                <p class="discounted-price">Starting Price <i class="fa fa-inr"></i>49,999/-</p>
             </div>
 
             <div class="buttons-container">
@@ -526,6 +541,51 @@ font-color:white;
         </div>
     </footer>
 
+    <div class="mobile-navigation">
+        <a href="index.html" class="nav-item">
+          <i class="fa fa-home"></i>
+          <span>Home</span>
+        </a>
+        <a href="course.html" class="nav-item">
+          <i class="fa fa-graduation-cap"></i>
+          <span>Courses</span>
+        </a>
+        <a href="services.html" class="nav-item">
+          <i class="fa fa-laptop"></i>
+          <span>Services</span>
+        </a>
+        <a href="https://vacomputers.com/" class="nav-item">
+          <i class="fa fa-user-circle"></i>
+          <span>Contact Us</span>
+        </a>
+      </div>
+    
+    
+    
+    
+    
+    
+      <script>
+        document.getElementById('homeButton').addEventListener('click', function () {
+          window.location.href = 'index.html';
+        });
+    
+        document.getElementById('coursesButton').addEventListener('click', function () {
+          window.location.href = 'education.html';
+        });
+    
+        document.getElementById('servicesButton').addEventListener('click', function () {
+          window.location.href = 'https://vacomputers.com/';
+        });
+    
+        document.getElementById('achievementsButton').addEventListener('click', function () {
+          window.location.href = 'testimonial.html';
+        });
+    
+        document.getElementById('contactButton').addEventListener('click', function () {
+          window.location.href = 'contact.html';
+        });
+      </script>
     <!-- ... (Your existing JavaScript includes) -->
 </body>
 
