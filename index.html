@@ -15,7 +15,7 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 
   <title>
-    Sahil
+    Vast Academy
   </title>
 
   <!-- slider stylesheet -->
@@ -34,61 +34,129 @@
   <link href="css/responsive.css" rel="stylesheet" />
 </head>
 <style>
-/* Add or modify the following styles in your CSS */
+  /* Add or modify the following styles in your CSS */
 
-.mobile-banner-section {
-  display: none;
-}
-
-@media only screen and (max-width: 767px) {
-  .slider_section {
+  .mobile-banner-section {
     display: none;
   }
 
-  .mobile-banner-section {
-    display: block;
-    text-align: center; /* Center the content */
+  @media only screen and (max-width: 767px) {
+    .slider_section {
+      display: none;
+    }
+
+    .mobile-banner-section {
+      display: block;
+      text-align: center;
+      /* Center the content */
+    }
+
+    .banner-container {
+      position: relative;
+      width: 100%;
+      max-width: 569px;
+      margin: 0 auto;
+      overflow: hidden;
+      /* Ensure the content doesn't overflow */
+    }
+
+    .banner_image {
+      width: 100%;
+      height: 100vh;
+      /* Adjusted to cover the full height of the viewport */
+      object-fit: cover;
+      /* Maintain aspect ratio and cover container */
+    }
+
+    .banner-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .banner-content {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff;
+      padding: 20px;
+      width: 80%;
+      max-width: 400px;
+    }
+
+    .banner-content .display-4 {
+      font-size: 30px;
+    }
+
+    /* ... (rest of the styles remain the same) */
   }
 
-  .banner-container {
-    position: relative;
-    width: 100%;
-    max-width: 569px;
-    margin: 0 auto;
-    overflow: hidden; /* Ensure the content doesn't overflow */
+  /* Existing styles for desktop view */
+
+  /* Add the following styles to your existing CSS */
+  .mobile-navigation {
+    display: none;
   }
 
-  .banner_image {
-    width: 100%;
-    height: 100vh; /* Adjusted to cover the full height of the viewport */
-    object-fit: cover; /* Maintain aspect ratio and cover container */
+  /* Media query for mobile view */
+  @media only screen and (max-width: 767px) {
+    .mobile-navigation {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #000;
+      /* Set the background color to black */
+      color: #fff;
+      /* Set the text color to white */
+      padding: 15px 0;
+      box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      /* Ensure it's above other elements */
+    }
+
+    .nav-item {
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      /* Set the text color to white */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 25%;
+      /* Set width to 25% for four items in a row */
+      transition: 0.3s;
+      /* Add transition for a smooth effect */
+    }
+
+    .nav-item i {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .nav-item span {
+      font-size: 12px;
+      /* Adjust font size for text */
+    }
+
+    /* Hover effect for better visibility */
+    .nav-item:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      /* Light background on hover */
+      border-radius: 50%;
+      /* Circular shape on hover */
+    }
   }
-
-  .banner-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-
-  .banner-content {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-    padding: 20px;
-    width: 80%;
-    max-width: 400px;
-  }
-
-  /* ... (rest of the styles remain the same) */
-}
-
 </style>
+
 <body>
   <div class="hero_area">
     <!-- header section strats -->
@@ -110,18 +178,18 @@
               <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="education.html">
+              <a class="nav-link" href="courses.html">
                 Courses
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://vacomputers.com/">
+              <a class="nav-link" href="services.html">
                 IT Services
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="testimonial.html">
-                Achievements
+              <a class="nav-link" href="https://aiita.org/study_centre/students_directory">
+                Check-Online
               </a>
             </li>
             <li class="nav-item">
@@ -177,14 +245,12 @@
                       </ul>
 
                       </p>
-                      <a href="">
-                        List Courses
-                      </a>
+                      <a href="#" class="btn btn-primary btn-lg btn-list-courses"> Explore Courses </a>
                     </div>
                   </div>
                   <div class="col-md-5 ">
                     <div class="img-box">
-                      <img src="images/banner.png" alt=""  />
+                      <img src="images/banner.png" alt="" />
                     </div>
                   </div>
                 </div>
@@ -200,22 +266,18 @@
                       </h2>
                       <h1> 50% Off Live Classes!</h1>
                       <p>
-                        Upgrade your skills with our interactive online live courses.
                       <ul>
                         <li> Stay Home, Learn Like You're There! </li>
-                        <li> Enjoy the Benefits of Walk-In Classes from Home. </li>
+
                         <li> Every Class Led by Expert Teachers. </li>
-                        <li> Get Certified Upon Course Completion </li>
                       </ul>
                       </p>
-                      <a href="">
-                        List Courses
-                      </a>
+                      <a href="#" class="btn btn-primary btn-lg btn-list-courses"> Explore Courses </a>
                     </div>
                   </div>
                   <div class="col-md-5 ">
                     <div class="img-box">
-                      <img src="images/banner1.png" alt=""  />
+                      <img src="images/banner1.png" alt="" />
                     </div>
                   </div>
                 </div>
@@ -229,18 +291,17 @@
                       <h1>
                         Confused Where to Start?
                       </h1>
-                      <p>
-                        Kickstart your learning journey and gain clarity
-                        Begin with our starter courses.
+                      <ul>
+                        <li> Begin your journey with our free courses </li>
+                        <li> Just click on our free courses to start your journey </li>
+                      </ul>
                       </p>
-                      <a href="">
-                        List Courses
-                      </a>
+                      <a href="#" class="btn btn-primary btn-lg btn-list-courses"> Free Courses </a>
                     </div>
                   </div>
                   <div class="col-md-5 ">
                     <div class="img-box">
-                      <img src="images/banner2.png" alt=""  />
+                      <img src="images/banner2.png" alt="" />
                     </div>
                   </div>
                 </div>
@@ -261,70 +322,70 @@
       </div>
     </section>
 
-    
-
-   
 
 
- 
-<section class="mobile-banner-section">
-  <div id="carouselMobile" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="banner-container">
-          <img src="images/banner_mobile.png" class="d-block w-100" alt="Banner Image 1">
-          <div class="banner-overlay"></div>
-          <div class="banner-content">
-            <h1 class="display-4">Join 100% Free Online Courses</h1>
-            <p class="lead">Just click on the course and start your learning journey.</p>
-            <ul class="list-unstyled">
-              <li>No Joining Fees</li>
-              <li>No Signup Required</li>
-              <li>No Formality</li>
-            </ul>
-            <a href="#" class="btn btn-primary btn-lg btn-list-courses">Explore Courses</a>
+
+
+
+
+    <section class="mobile-banner-section">
+      <div id="carouselMobile" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="banner-container">
+              <img src="images/banner_mobile.png" class="d-block w-100" alt="Banner Image 1">
+              <div class="banner-overlay"></div>
+              <div class="banner-content">
+                <h1 class="display-4">Join 100% Free Online Courses</h1>
+                <p class="lead">Just click on the course and start your learning journey.</p>
+                <ul class="list-unstyled">
+                  <li>No Joining Fees</li>
+                  <li>No Signup Required</li>
+                  <li>No Formality</li>
+                </ul>
+                <a href="#" class="btn btn-primary btn-lg btn-list-courses">Explore Courses</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="banner-container">
+              <img src="images/banner_mobile1.png" class="d-block w-100" alt="Banner Image 2">
+              <div class="banner-overlay"></div>
+              <div class="banner-content">
+                <h1 class="display-4">Upgrade Your Skills: 50% Off Live Classes!</h1>
+                <p class="lead">Upgrade your skills with our interactive online live courses.</p>
+                <ul class="list-unstyled">
+                  <li>Stay Home, Learn Like You're There!</li>
+                  <li>Enjoy the Benefits of Walk-In Classes from Home.</li>
+                  <li>Every Class Led by Expert Teachers.</li>
+                  <li>Get Certified Upon Course Completion</li>
+                </ul>
+                <a href="#" class="btn btn-primary btn-lg btn-list-courses">Explore Courses</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="banner-container">
+              <img src="images/banner_mobile2.png" class="d-block w-100" alt="Banner Image 3">
+              <div class="banner-overlay"></div>
+              <div class="banner-content">
+                <h1 class="display-4">Confused Where to Start?</h1>
+                <p class="lead">Kickstart your learning journey and gain clarity. Begin with our starter courses.</p>
+                <a href="#" class="btn btn-primary btn-lg btn-list-courses">Explore Courses</a>
+              </div>
+            </div>
           </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMobile" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselMobile" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-      <div class="carousel-item">
-        <div class="banner-container">
-          <img src="images/banner_mobile1.png" class="d-block w-100" alt="Banner Image 2">
-          <div class="banner-overlay"></div>
-          <div class="banner-content">
-            <h1 class="display-4">Upgrade Your Skills: 50% Off Live Classes!</h1>
-            <p class="lead">Upgrade your skills with our interactive online live courses.</p>
-            <ul class="list-unstyled">
-              <li>Stay Home, Learn Like You're There!</li>
-              <li>Enjoy the Benefits of Walk-In Classes from Home.</li>
-              <li>Every Class Led by Expert Teachers.</li>
-              <li>Get Certified Upon Course Completion</li>
-            </ul>
-            <a href="#" class="btn btn-primary btn-lg btn-list-courses">Explore Courses</a>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="banner-container">
-          <img src="images/banner_mobile2.png" class="d-block w-100" alt="Banner Image 3">
-          <div class="banner-overlay"></div>
-          <div class="banner-content">
-            <h1 class="display-4">Confused Where to Start?</h1>
-            <p class="lead">Kickstart your learning journey and gain clarity. Begin with our starter courses.</p>
-            <a href="#" class="btn btn-primary btn-lg btn-list-courses">Explore Courses</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselMobile" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselMobile" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-</section>
+    </section>
 
 
 
@@ -344,32 +405,32 @@
           <a href="course.html">
             <h6> Free Courses </h6>
             <img src="images/p1.png">
-            <h5> Type: Online </h5> 
-            <h5> Category: Computer </h5> 
+            <h5> Type: Online </h5>
+            <h5 class="type"> Category: Computer </h5>
           </a>
         </div>
         <div class="items">
           <a href="course.html">
             <h6> Live Classes </h6>
             <img src="images/p2.png">
-            <h5> Type: Online </h5> 
-            <h5> Category: Computer </h5>
+            <h5> Type: Online </h5>
+            <h5 class="type"> Category: Computer </h5>
           </a>
         </div>
         <div class="items">
           <a href="course.html">
             <h6> Computer Courses </h6>
             <img src="images/p4.png">
-            <h5> Type: In Person/Online </h5> 
-            <h5> Certificate-Diploma </h5>
+            <h5> Type: In Person/Online </h5>
+            <h5 class="type"> Certificate-Diploma </h5>
           </a>
         </div>
         <div class="items">
           <a href="course.html">
             <h6> Spoken English </h6>
             <img src="images/p3.png">
-            <h5> Type: In Person </h5> 
-            <h5> Level Based Coaching</h5>
+            <h5> Type: In Person </h5>
+            <h5 class="type"> Level Based Coaching</h5>
           </a>
         </div>
       </div>
@@ -470,9 +531,10 @@
                 </div>
                 <div class="detail-box">
                   <p>
-                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                    alteration in
-                    some form, by injected humour, or randomised words which .
+                    I'm Khushbeer Singh, part of Vast Academy's Class of 2013. The academy taught me the value of
+                    dressing well, grasping marketing concepts, and having confidence in myself. These lessons have
+                    played a crucial role in my success.
+
                   </p>
                 </div>
               </div>
@@ -484,14 +546,15 @@
                     <img src="images/client1.png" alt="" class="img-fluid">
                   </div>
                   <h4>
-                    Vikas 
+                    Vikas
                   </h4>
                 </div>
                 <div class="detail-box">
                   <p>
-                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                    alteration in
-                    some form, by injected humour, or randomised words which .
+                    I am Vikas, an alumnus of Vast Academy from the 2013 batch. During my time at Vast Academy, I gained
+                    invaluable insights into the significance of dressing well, understanding marketing principles, and
+                    realizing my own worth. These lessons have been instrumental in shaping my journey to success.
+
                   </p>
                 </div>
               </div>
@@ -508,9 +571,9 @@
                 </div>
                 <div class="detail-box">
                   <p>
-                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                    alteration in
-                    some form, by injected humour, or randomised words which .
+                    I'm Jaspreet, and I gained valuable computer knowledge at Vast Academy. Thanks to their guidance,
+                    I've opened my own institute, making me more confident and successful in the field.
+
                   </p>
                 </div>
               </div>
@@ -527,9 +590,9 @@
                 </div>
                 <div class="detail-box">
                   <p>
-                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                    alteration in
-                    some form, by injected humour, or randomised words which .
+                    I'm Uday Kumar, a student at Vast Academy. I used to be afraid of trying new things, but thanks to
+                    the academy, I've learned how to gain knowledge and experience. Now, I'm fearless and successful.
+
                   </p>
                 </div>
               </div>
@@ -552,27 +615,14 @@
       </div>
       <div class="container container-bg">
         <div class="row">
-          <div class="col-lg-7 col-md-6 px-0">
-            <div class="map_container">
-              <div class="map-responsive">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.49390513267!2d74.94861177562107!3d31.757012374106576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391961c3c2c9062d%3A0xe7cc52c491ff3101!2sVast%20Academy!5e0!3m2!1sen!2sin!4v1707908421077!5m2!1sen!2sin"
-                  width="450" height="550" style="border:0;" allowfullscreen="" loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
-              <div class="info">
-                <span> <button><a href="https://maps.app.goo.gl/qQ5SAYvVhFZFgaAq8">Get Directions</a> </button></span>
-              </div>
-            </div>
-          </div>
           <div class="col-md-6 col-lg-5 px-0">
             <form action="https://formspree.io/f/mnqedzdv" method="POST">
               <div>
-                <input type="text" name="name" placeholder="Name *Required" required />
+                <input type="text" name="name" placeholder="Name (Required)" required />
               </div>
               <div>
                 <input type="text" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}"
-                  title="Please enter a valid 10-digit phone number" placeholder="10-digit Phone Number *Required"
+                  title="Please enter a valid 10-digit phone number" placeholder="10-digit Mobile (Required)"
                   required />
               </div>
               <div>
@@ -580,7 +630,7 @@
               </div>
               <div>
                 <select name="query_type" id="query_type">
-                  <option value="">--select a query type-- *Required</option>
+                  <option value="">Select a Query (Required)</option>
                   <option value="Computer Online Course">Computer Online Course</option>
                   <option value="Computer Live Classes">Computer Live Classes</option>
                   <option value="Computer Walk-in Classes">Computer Walk-in Classes</option>
@@ -600,9 +650,23 @@
               </div>
             </form>
           </div>
+          <div class="col-lg-7 col-md-6 px-0">
+            <div class="map_container">
+              <div class="map-responsive"> 
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.49390513267!2d74.94861177562107!3d31.757012374106576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391961c3c2c9062d%3A0xe7cc52c491ff3101!2sVast%20Academy!5e0!3m2!1sen!2sin!4v1707908421077!5m2!1sen!2sin"
+                  width="450" height="550" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <div class="info">
+                <span> <button><a href="https://maps.app.goo.gl/qQ5SAYvVhFZFgaAq8">Get Directions</a> </button></span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
 
     <!-- end contact section -->
 
@@ -610,74 +674,74 @@
 
     <footer>
       <div class="container">
-          <div class="row">
-              <div class="col-lg-4">
-                  <div class="address">
-                      <h4>Academy</h4>
-                      <ul>
-                      <li> <a href="">About Us</a></li>
-                      <li><a href="">Gallery</a></li>
-                      <li><a href="">Achievements</a></li>
-                      <li><a href="">Contact Us</a></li>
-                    </ul>
-                  </div>
-              </div>
-              <div class="col-lg-4">
-                  <div class="links">
-                      <h4>Follow Us On</h4>
-                      <div class="col-lg-3">
-                        <div class="social-links">
-                            <ul>
-                               
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                  </div>
-              </div>
-              <div class="col-lg-4">
-                  <div class="hours">
-                      <h4>Reach Us</h4>
-                      <a href="">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        <span> Near New Bus Stand, Oppo. Govt. Sen. Sec School (Majitha) </span>
-                      </a>
-                  </div>
-              </div>
-                        
-                    </div>
-                </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="address">
+              <h4>Academy</h4>
+              <ul>
+                <li> <a href="">About Us</a></li>
+                <li><a href="">Gallery</a></li>
+                <li><a href="">Achievements</a></li>
+                <li><a href="">Contact Us</a></li>
+              </ul>
             </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="links">
+              <h4>Follow Us On</h4>
+              <div class="col-lg-3">
+                <div class="social-links">
+                  <ul>
+
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="hours">
+              <h4>Reach Us</h4>
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span> Near New Bus Stand, Oppo. Govt. Sen. Sec School (Majitha) </span>
+              </a>
+            </div>
+          </div>
+
         </div>
-    </div>
-            </footer>
+      </div>
+  </div>
+  </div>
+  </div>
+  </footer>
 
- 
 
-    <!-- end info section -->
 
-    <!-- Optional JavaScript; choose one of the two! -->
+  <!-- end info section -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"></script>
+  <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
 
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-    </script>
-    <script src="js/custom.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <script src="js/custom.js"></script>
 
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
@@ -685,102 +749,51 @@
 <script src="js/script.js"></script>  -->
 
 
-<div class="mobile-navigation">
+  <div class="mobile-navigation">
     <a href="index.html" class="nav-item">
       <i class="fa fa-home"></i>
       <span>Home</span>
     </a>
-    <a href="education.html" class="nav-item">
+    <a href="course.html" class="nav-item">
       <i class="fa fa-graduation-cap"></i>
       <span>Courses</span>
-    </a>
-    <a href="testimonial.html" class="nav-item">
-      <i class="fa fa-star"></i>
-      <span>Achievements</span>
     </a>
     <a href="https://vacomputers.com/" class="nav-item">
       <i class="fa fa-laptop"></i>
       <span>Services</span>
     </a>
+    <a href="https://vacomputers.com/" class="nav-item">
+      <i class="fa fa-user-circle"></i>
+      <span>Contact Us</span>
+    </a>
   </div>
 
- 
-<style>
-  /* Existing styles for desktop view */
-
-  /* Add the following styles to your existing CSS */
-  .mobile-navigation {
-    display: none;
-  }
-
-  /* Media query for mobile view */
-  @media only screen and (max-width: 767px) {
-    .mobile-navigation {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: #000; /* Set the background color to black */
-      color: #fff; /* Set the text color to white */
-      padding: 15px 0;
-      box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
-      z-index: 1000; /* Ensure it's above other elements */
-    }
-
-    .nav-item {
-      text-align: center;
-      text-decoration: none;
-      color: #fff; /* Set the text color to white */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 25%; /* Set width to 25% for four items in a row */
-      transition: 0.3s; /* Add transition for a smooth effect */
-    }
-
-    .nav-item i {
-      font-size: 24px;
-      margin-bottom: 5px;
-    }
-
-    .nav-item span {
-      font-size: 12px; /* Adjust font size for text */
-    }
-
-    /* Hover effect for better visibility */
-    .nav-item:hover {
-      background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
-      border-radius: 50%; /* Circular shape on hover */
-    }
-  }
-</style>
 
 
 
-<script>
-  document.getElementById('homeButton').addEventListener('click', function () {
-    window.location.href = 'index.html';
-  });
 
-  document.getElementById('coursesButton').addEventListener('click', function () {
-    window.location.href = 'education.html';
-  });
 
-  document.getElementById('servicesButton').addEventListener('click', function () {
-    window.location.href = 'https://vacomputers.com/';
-  });
+  <script>
+    document.getElementById('homeButton').addEventListener('click', function () {
+      window.location.href = 'index.html';
+    });
 
-  document.getElementById('achievementsButton').addEventListener('click', function () {
-    window.location.href = 'testimonial.html';
-  });
+    document.getElementById('coursesButton').addEventListener('click', function () {
+      window.location.href = 'education.html';
+    });
 
-  document.getElementById('contactButton').addEventListener('click', function () {
-    window.location.href = 'contact.html';
-  });
-</script>
+    document.getElementById('servicesButton').addEventListener('click', function () {
+      window.location.href = 'https://vacomputers.com/';
+    });
+
+    document.getElementById('achievementsButton').addEventListener('click', function () {
+      window.location.href = 'testimonial.html';
+    });
+
+    document.getElementById('contactButton').addEventListener('click', function () {
+      window.location.href = 'contact.html';
+    });
+  </script>
 
 
 </body>

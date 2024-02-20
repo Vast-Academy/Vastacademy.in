@@ -282,7 +282,7 @@ a:focus {
   display: inline-block;
   padding: 10px 40px;
   background-color: #00a2ff;
-  color: #000000;
+  color: #ffffff;
   border: 1px solid #00a2ff;
   border-radius: 5px;
   -webkit-transition: all .3s;
@@ -290,11 +290,17 @@ a:focus {
   margin-top: 25px;
   text-transform: uppercase;
   text-align: center;
+ font-size: 15px;
 }
 
+.detail-box .btn{
+  text-align: center;
+  margin-left: 200px;
+  
+}
 .slider_section .detail-box a:hover {
   background-color: transparent;
-  color: #db4566;
+  color: #00a2ff;
 }
 
 
@@ -350,7 +356,7 @@ a:focus {
 
 .items h6{
   color: #000000;
-  font-size: 25px;
+  font-size: 20px;
   font-weight:bold ;
   font-family: 'Roboto', sans-serif !important;
 }
@@ -359,8 +365,12 @@ a:focus {
   font-family: 'Roboto', sans-serif !important;
   color: #000000;
   font-size: 17px;
+  margin-top: 15px;
 }
 
+.items .type {
+  margin-top: -5px;
+}
 .items img{
   width: 100%;
 height: auto;
@@ -488,6 +498,11 @@ section.course{
 width: 200px;
 height: auto;
  }
+
+ .web_list ul{
+  padding-left: 20px;
+  margin-left: 20px;
+ }
  .duration h5{
   font-size: 20px;
  }
@@ -500,7 +515,6 @@ height: auto;
    padding-right: 5px;
    padding-top: 5px;
    margin-top: -5px;
-
  }
 
  .heading-box h6 {
@@ -516,10 +530,10 @@ height: auto;
  }
 
  .actual-price {
-   font-size: 35px;
+   font-size: 30px;
    color: black;
-   font-weight: 900;
-   margin-top: -30px;
+   font-weight: 500;
+   margin-top: 0px;
  }
 
 
@@ -572,6 +586,7 @@ height: auto;
 }
 .contact_section .map_container{
   background-color: #f1f3f4;
+  overflow: hidden;
 }
 .contact_section .container-bg {
   -webkit-box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.1);
@@ -580,6 +595,7 @@ height: auto;
 
 .contact_section .heading_container {
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .contact_section .row {
@@ -609,8 +625,8 @@ height: auto;
 
 .contact_section .info span a {
   color:#ffffff;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: 200;
   line-height: 25px;
   text-transform: none;
 }
@@ -618,6 +634,37 @@ height: auto;
   background-color: transparent;
   color:  #00a2ff;
 }
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+@media screen and (max-width: 768px) {
+  .contact_section .map_container {
+    padding-top: 0; /* Remove any padding if present */
+    text-align: center; /* Center align the content */
+  }
+
+  .contact_section .info {
+    margin-top: 20px; /* Add margin to separate the button from the map */
+  }
+
+  .contact_section .info span {
+    display: inline-block; /* Make the button display inline-block to center it */
+  }
+}
+
 .contact_section form {
   padding-right: 35px;
   padding: 45px 20px;
@@ -866,14 +913,6 @@ footer .hours ul li {
   margin-bottom: 5px;
 }
 
-footer .under-footer {
-  margin-top: 50px;
-}
-
-footer p.copyright {
-  text-align: right;
-}
-
 footer .social-links {
   text-align: center;
   margin-top: 10px;
@@ -882,6 +921,7 @@ footer .social-links {
 footer .social-links ul {
   display: inline-flex;
   padding: 0;
+  margin-left: -25px;
 }
 
 footer .social-links ul li {
@@ -904,6 +944,36 @@ footer .social-links ul li a {
 
 footer .social-links ul li a:hover {
   background-color: #656c74;
+}
+
+@media screen and (max-width: 768px) {
+  footer .address,
+  footer .hours {
+    display: none;
+  }
+
+  footer {
+    padding-top:40px;
+    margin-bottom: 20px;
+    height: 200px; 
+  }
+
+  footer .social-links {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  footer .social-links ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-left: -25px;
+  }
+
+  footer .social-links ul li {
+    margin: 0 0; /* Adjust spacing between social icons */
+  }
 }
 
 /* end info section */
