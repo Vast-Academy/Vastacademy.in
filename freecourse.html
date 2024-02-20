@@ -33,7 +33,65 @@
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
 </head>
+<style>
+    /* Add the following styles to your existing CSS */
+  .mobile-navigation {
+    display: none;
+  }
 
+  /* Media query for mobile view */
+  @media only screen and (max-width: 767px) {
+    .mobile-navigation {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #000;
+      /* Set the background color to black */
+      color: #fff;
+      /* Set the text color to white */
+      padding: 15px 0;
+      box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      /* Ensure it's above other elements */
+    }
+
+    .nav-item {
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      /* Set the text color to white */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 25%;
+      /* Set width to 25% for four items in a row */
+      transition: 0.3s;
+      /* Add transition for a smooth effect */
+    }
+
+    .nav-item i {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .nav-item span {
+      font-size: 12px;
+      /* Adjust font size for text */
+    }
+
+    /* Hover effect for better visibility */
+    .nav-item:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      /* Light background on hover */
+      border-radius: 50%;
+      /* Circular shape on hover */
+    }
+  }
+</style>
 <body>
     <div class="hero_area">
         <!-- header section strats -->
@@ -204,5 +262,51 @@
     </div>
     </footer>
 
+    <div class="mobile-navigation">
+        <a href="index.html" class="nav-item">
+          <i class="fa fa-home"></i>
+          <span>Home</span>
+        </a>
+        <a href="course.html" class="nav-item">
+          <i class="fa fa-graduation-cap"></i>
+          <span>Courses</span>
+        </a>
+        <a href="services.html" class="nav-item">
+          <i class="fa fa-laptop"></i>
+          <span>Services</span>
+        </a>
+        <a href="https://vacomputers.com/" class="nav-item">
+          <i class="fa fa-user-circle"></i>
+          <span>Contact Us</span>
+        </a>
+      </div>
+    
+    
+    
+    
+    
+    
+      <script>
+        document.getElementById('homeButton').addEventListener('click', function () {
+          window.location.href = 'index.html';
+        });
+    
+        document.getElementById('coursesButton').addEventListener('click', function () {
+          window.location.href = 'education.html';
+        });
+    
+        document.getElementById('servicesButton').addEventListener('click', function () {
+          window.location.href = 'https://vacomputers.com/';
+        });
+    
+        document.getElementById('achievementsButton').addEventListener('click', function () {
+          window.location.href = 'testimonial.html';
+        });
+    
+        document.getElementById('contactButton').addEventListener('click', function () {
+          window.location.href = 'contact.html';
+        });
+      </script>
+    
     </body>
     </html>
