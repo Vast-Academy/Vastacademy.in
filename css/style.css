@@ -54,8 +54,17 @@ body {
 
 
 /*header section*/
+
+
 .hero_area {
   padding: 0 45px;
+}
+
+.header_section {
+  position: sticky;
+  top: 0;
+  background-color: white; /* Add a background color if needed */
+  z-index: 1000; /* Ensure the navigation bar stays on top of other content */
 }
 
 .container2{
@@ -99,7 +108,7 @@ margin-left: 150px;
   -ms-flex-pack: center;
   justify-content: center;
   padding: 10px 0;
-  border-radius: 15px 15px 0 0;
+  
   margin-top: 20px;
 }
 
@@ -511,6 +520,7 @@ section.course{
  .container-sort{
   display: flex;
   justify-content: right;
+  margin-top: -25px;
  }
  .container-course {
    display: flex;

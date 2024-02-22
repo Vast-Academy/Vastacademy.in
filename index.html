@@ -156,12 +156,29 @@
     }
   }
 
+  @media (max-width: 768px) {
+    .top1{
+      text-align: center;
+      margin-left: 20px;
+    }
+    .container2{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .top2{
+      margin-top: -35px;
+    }
+    .top3 {
+        display: none;
+    }
+}
 </style>
 
 <body>
   <div class="hero_area">
     <!-- header section strats -->
-    <header class="header_section">
+    <header class="header_section" >
       <div class="container2">
         <div class="top1">
           <div class="logo">
@@ -278,7 +295,6 @@
                       <p>
                       <ul>
                         <li> Stay Home, Learn Like You're There! </li>
-
                         <li> Every Class Led by Expert Teachers. </li>
                       </ul>
                       </p>
@@ -362,13 +378,11 @@
               <img src="images/banner_mobile1.png" class="d-block w-100" alt="Banner Image 2">
               <div class="banner-overlay"></div>
               <div class="banner-content">
-                <h1 class="display-4">Upgrade Your Skills: 50% Off Live Classes!</h1>
-                <p class="lead">Upgrade your skills with our interactive online live courses.</p>
+                <h1 class="display-4"> Upgrade Your Skills:</h1>
+                <p class="lead">50% Off Live Classes!</p>
                 <ul class="list-unstyled">
-                  <li>Stay Home, Learn Like You're There!</li>
-                  <li>Enjoy the Benefits of Walk-In Classes from Home.</li>
-                  <li>Every Class Led by Expert Teachers.</li>
-                  <li>Get Certified Upon Course Completion</li>
+                  <li> Stay Home, Learn Like You're There! </li>
+                  <li> Every Class Led by Expert Teachers. </li>
                 </ul>
                 <a href="#" class="btn btn-primary btn-lg btn-list-courses">Explore Courses</a>
               </div>
@@ -380,7 +394,12 @@
               <div class="banner-overlay"></div>
               <div class="banner-content">
                 <h1 class="display-4">Confused Where to Start?</h1>
-                <p class="lead">Kickstart your learning journey and gain clarity. Begin with our starter courses.</p>
+                <p class="lead">
+                  <ul>
+                  <li> Begin your journey with our free courses </li>
+                  <li> Just click on our free courses to start your journey </li>
+                </ul>
+              </p>
                 <a href="#" class="btn btn-primary btn-lg btn-list-courses">Explore Courses</a>
               </div>
             </div>
@@ -774,7 +793,7 @@
     </a>
     <a href="contact.html" class="nav-item">
       <i class="fa fa-user-circle"></i>
-      <span>Contact Us</span>
+      <span>Sign In</span>
     </a>
   </div>
 
@@ -803,6 +822,8 @@
     document.getElementById('contactButton').addEventListener('click', function () {
       window.location.href = 'contact.html';
     });
+
+    
   </script>
 
 
