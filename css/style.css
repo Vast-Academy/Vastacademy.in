@@ -52,22 +52,46 @@ body {
   color: #f89cab;
 }
 
-.heading_container.heading_center {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
-}
 
 /*header section*/
 .hero_area {
   padding: 0 45px;
 }
 
-.hero_area.sub_pages {
-  height: auto;
+.container2{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 33px; 
 }
 
+.top1{
+  background-color: #ffffff;
+  padding: 15px;
+  width: 200px; 
+  height: 80px;
+margin-left: 150px;
+}
+
+.top2{
+  background-color: #ffffff;
+  padding: 15px;
+  width: 250px; 
+  height: 80px;
+}
+
+.top3{
+  background-color: #ffffff;
+  padding: 15px;
+  width: 200px; 
+  height: 80px;
+  margin-right: 110px;
+}
+.top3 .btn{
+  margin-top: 22px;
+  
+}
 #navbarSupportedContent {
   width: 100%;
   background-color: rgb(0, 0, 0);
@@ -76,6 +100,7 @@ body {
   justify-content: center;
   padding: 10px 0;
   border-radius: 15px 15px 0 0;
+  margin-top: 20px;
 }
 
 #navbarSupportedContent.innerpage_navbar {
@@ -120,10 +145,16 @@ a:focus {
 }
 
 .navbar-brand {
+  height: 60px;
   margin: 15px 0;
   padding: 0;
+  text-align: center;
 }
 
+.logo:hover img {
+  transform: scale(1.1); /* Zoom in effect */
+  transition: transform 0.5s ease; /* Smooth transition */
+}
 .navbar-brand span {
   font-size: 28px;
   font-weight: bold;
@@ -131,6 +162,11 @@ a:focus {
   text-transform: uppercase;
   margin: 0;
   padding: 0;
+  text-align: center;
+}
+
+.top2 a span:hover{
+  color: #00a2ff;
 }
 
 .custom_nav-container .nav_search-btn {
@@ -377,7 +413,10 @@ a:focus {
   width: 100%;
 height: auto;
 }
-
+.section2 .btn-success{
+  font-size: 18px;
+  margin-left: 40px;
+}
 .items:hover img {
   transform: scale(1.1); /* Zoom in effect */
   transition: transform 0.5s ease; /* Smooth transition */
@@ -449,6 +488,13 @@ section.course{
   background-color:rgba(241, 240, 238, 0.438);
  }
 
+ .service-title {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-top: 10px;
+  padding-bottom: 10px;
+} 
+
  .section2 h3 a{
   text-decoration: none;
   color: white;
@@ -456,10 +502,9 @@ section.course{
 
  .section2 h3{
   text-align: center;
-  font-size: 1rem;
-  
+  font-size: 2.5rem;
   text-transform: uppercase;
-  
+  background-color: black;
   padding: 8px;
  }
 
@@ -527,18 +572,25 @@ text-align:center;
    font-weight: bold;
  }
 
+ .section2 .duration{
+margin-top: -10px;
+margin-bottom: 10px;
+ }
+
   .price {
    font-size: 25px;
-   color: gray;
+   color: red;
    font-weight: bold;
    padding-top: 10px;
- }
+   margin-left: 40px;
+  }
 
  .actual-price {
    font-size: 30px;
-   color: black;
-   font-weight: 500;
-   margin-top: 0px;
+   color: rgb(2, 65, 102);
+   font-weight: bold;
+  margin-left: 40px;
+   margin-top: -25px;
  }
 
 
@@ -920,13 +972,13 @@ footer .hours ul li {
 
 footer .social-links {
   text-align: center;
-  margin-top: 10px;
+  margin-left: 43px;
 } 
 
 footer .social-links ul {
   display: inline-flex;
   padding: 0;
-  margin-left: -25px;
+  
 }
 
 footer .social-links ul li {
