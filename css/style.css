@@ -547,14 +547,12 @@ section.course{
    margin: 15px;
    width: 250px;
    height: 300px;
-   padding-left: 20px;
-   padding-top: 30px;
-   padding-right: 30px;
    background-color: rgb(233, 230, 230);
  }
 
  .section2 .container-img img{
-width: 200px;
+  
+width: 250px;
 height: auto;
 text-align:center;
  }

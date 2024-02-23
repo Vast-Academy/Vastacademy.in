@@ -115,7 +115,7 @@
                             <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="courses.html">
+                            <a class="nav-link" href="allcourses.html">
                                 Courses
                             </a>
                         </li>
@@ -158,18 +158,9 @@
                 </div>
             </nav>
         </header>
-
-        <section class="course">
-            <div class="container-sort">
-              <select name="sort_by" id="sort_by">
-                <option value=""> Sort by: Featured </option>
-                <option value="Duration"> Duration </option>
-                <option value="priceAsc">Price - Low to High</option>
-                <option value="priceDesc">Price - High to Low</option>
-              </select>
-            </div>
-          </section>
-
+        <div id="courseSection">
+        <? php include 'course_section.php'; ?>
+</div>
         <section class="section2">
             <h3><a href="#">Lab Management </a></h3>
             <div class="container-course">
@@ -195,11 +186,11 @@
               </div>
           </section>
         <br>
-          <section class="section3">
+          <section class="section2">
             <div class="container-course">
               <div class="column-course">
                 <div class="container-img">
-                  <img src="images/gpc.png" alt="Photo 1" width="200px">
+                  <img src="images/gpc.png" alt="Photo 1">
                 </div>
                 <h2>Build Custom Gaming PC</h2>
                 <p>According to your budget and with latest gaming genaratrion supported pc with latest tools </p>
@@ -219,11 +210,11 @@
               </div>
           </section>
           <br>
-          <section class="section3">
+          <section class="section2">
             <div class="container-course">
               <div class="column-course">
                 <div class="container-img">
-                  <img src="images/cafe.png" alt="Photo 1" width="200px">
+                  <img src="images/cafe.png" alt="Photo 1">
                 </div>
                 <h2>Cafe Configuration </h2>
                 <p>1 server with Min 4 Client computers Building with networking and configuration 
@@ -244,11 +235,11 @@
               </div>
           </section>
           <br>
-          <section class="section3">
+          <section class="section2">
             <div class="container-course">
               <div class="column-course">
                 <div class="container-img">
-                  <img src="images/call.png" alt="Photo 1" width="200px">
+                  <img src="images/call.png" alt="Photo 1">
                 </div>
                 <h2>Call Centre Configuration  </h2>
                 <p>10 Computers with 
@@ -329,7 +320,7 @@
       </a>
       <a href="contact.html" class="nav-item">
         <i class="fa fa-user-circle"></i>
-        <span>Contact Us</span>
+        <span>Sign In</span>
       </a>
     </div>
   
