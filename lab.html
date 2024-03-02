@@ -34,6 +34,190 @@
     <link href="css/responsive.css" rel="stylesheet" />
 </head>
 <style>
+  .service-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.service-details-container {
+    margin-top: 20px;
+}
+
+.service-details {
+    text-align: left;
+}
+
+.container-img{
+    margin-top: -8px;
+}
+.detail {
+    margin-bottom: 10px;
+}
+
+.trending {
+    margin-top: 20px;
+}
+
+.btn-trending {
+    background-color: lightgreen;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.price-container {
+    margin-top: 20px;
+}
+
+.original-price {
+    color: red;
+    text-decoration: line-through;
+    font-size:1.2em;
+   
+}
+
+.buttons-container {
+    margin-top: 20px;
+}
+
+.btn-primary,
+.btn-danger {
+    margin-right: 10px;
+}
+
+.service-description {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.service-includes-container {
+    text-align: left;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-top: 70px;
+    border-radius: 10px;
+}
+
+.includes-heading {
+    color: #333;
+}
+
+.include-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.include-item {
+    margin-bottom: 10px;
+    color: #555;
+}
+.discounted-price {
+    color: #4CAF50; /* Green color for discounted price */
+    font-weight: bold;
+    font-size: 1.5em; /* Adjust font size */
+} 
+
+
+/* Additional styles for the remaining course sections (Semi Dynamic, Dynamic Custom, Addons Pages) */
+.section2{
+    padding-bottom: 10px;
+}
+.section3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.container-course {
+    max-width: 800px;
+    margin: 20px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.course-title {
+    margin-top: 10px;
+}
+
+.course-description {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.heading-box {
+    margin-top: 20px;
+}
+
+.duration {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.price {
+    color: red;
+    text-decoration: line-through;
+    font-size: 1.2em;
+}
+
+.actual-price {
+    margin-top: 10px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+
+
+
+.container-course {
+    max-width: 800px;
+    margin: 20px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.course-title {
+    margin-top: 10px;
+}
+
+.course-description {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.heading-box {
+    margin-top: 20px;
+}
+
+.duration {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.service-title {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+ .main{
+    text-align:center;
+font-size:2em;
+color:white;
+}
+
+
   /* Add the following styles to your existing CSS */
   .mobile-navigation {
     display: none;
@@ -158,106 +342,164 @@
                 </div>
             </nav>
         </header>
-        <div id="courseSection">
-        <? php include 'course_section.php'; ?>
-</div>
-        <section class="section2">
-            <h3><a href="#">Lab Management </a></h3>
-            <div class="container-course">
-              <div class="column-course">
-                <div class="container-img">
-                  <img src="images/cpc.png" alt="Photo 1">
-                </div>
-                <h2> Build a Custom PC </h2>
-                <p>Just tell use your budget and purpose 
-                  we will build best performance pc under your budget who fulfill your requirements  </p>
-                  <h5 class="duration"> Duration = 3 Months </h5>
-                <div class="heading-box">
-                  <h6>Trending # 1</h6>
-                </div>
-                <div class="price">
-                  <p><i class="fa fa-inr"></i><s>8999/-</s></p>
-                </div>
-                <div class="actual-price">
-                  <p>Starting Price <i class="fa fa-inr"></i>499/-</p>
-                </div>
-                <button type="button" class="btn btn-primary">Book A Demo</button>
-                <button type="button" class="btn btn-danger">Join Course</button>
+        
+        <section class="course">
+          <div class="container-sort">
+              <select name="sort_by" id="sort_by">
+                  <option value="">Sort by: Featured</option>
+                  <option value="priceAsc">Price - Low to High</option>
+                  <option value="priceDesc">Price - High to Low</option>
+              </select>
+          </div>
+      </section>
+    
+    <!-- Website Development Section -->
+    <section class="section2">
+      <h1 style=" margin-bottom: 20px; text-align:center; background-color:#000; color: #fff; padding: 10px; border-radius: 10px;">LAB MANAGEMENT</h1>
+      <div class="service-container">
+          <h2 class="service-title">Build a Custom PC</h2>
+          <div class="service-details-container">
+              <div class="container-img">
+                  <img src="images/cpc.png" alt="Static Website Image" class="service-image">
               </div>
-          </section>
-        <br>
-          <section class="section2">
-            <div class="container-course">
-              <div class="column-course">
-                <div class="container-img">
-                  <img src="images/gpc.png" alt="Photo 1">
-                </div>
-                <h2>Build Custom Gaming PC</h2>
-                <p>According to your budget and with latest gaming genaratrion supported pc with latest tools </p>
-                  <h5 class="duration"> Duration = 3 Months </h5>
-                <div class="heading-box">
-                  <h6>Trending # 3</h6>
-                </div>
-                <div class="price">
-                  <p><i class="fa fa-inr"></i><s>17,999/-</s></p>
-                </div>
-                <div class="actual-price">
-                  <p>starting price <br>
-                    Free 5 PS4 and 5 Ps3 Games according to your demand <i class="fa fa-inr"></i>1499/-</p>
-                </div>
-                <button type="button" class="btn btn-primary">Book A Demo</button>
-                <button type="button" class="btn btn-danger">Join Course</button>
+              <div class="service-details">
               </div>
-          </section>
-          <br>
-          <section class="section2">
-            <div class="container-course">
-              <div class="column-course">
-                <div class="container-img">
-                  <img src="images/cafe.png" alt="Photo 1">
-                </div>
-                <h2>Cafe Configuration </h2>
-                <p>1 server with Min 4 Client computers Building with networking and configuration 
-                  Select your computer range 
-                  </p>
-                  <h5 class="duration"> Duration = 3 Months </h5>
-                <div class="heading-box">
-                  <h6>Trending # 3</h6>
-                </div>
-                <div class="price">
-                  <p><i class="fa fa-inr"></i><s>17,999/-</s></p>
-                </div>
-                <div class="actual-price">
-                  <p>Starting Price <i class="fa fa-inr"></i>3999/-</p>
-                </div>
-                <button type="button" class="btn btn-primary">Book A Demo</button>
-                <button type="button" class="btn btn-danger">Join Course</button>
+              <div class="service-description">
+                  <p>Just tell use your budget and purpose 
+                    we will build best performance pc under your budget who fulfill your requirements</p>
               </div>
-          </section>
-          <br>
-          <section class="section2">
-            <div class="container-course">
-              <div class="column-course">
-                <div class="container-img">
-                  <img src="images/call.png" alt="Photo 1">
-                </div>
-                <h2>Call Centre Configuration  </h2>
-                <p>10 Computers with 
-                  Linux Operating system with VOIP call Configuration</p>
-                  <h5 class="duration"> Duration = 3 Months </h5>
-                <div class="heading-box">
-                  <h6>Trending # 3</h6>
-                </div>
-                <div class="price">
-                  <p><i class="fa fa-inr"></i><s>17,999/-</s></p>
-                </div>
-                <div class="actual-price">
-                  <p>Starting Price <i class="fa fa-inr"></i>9999/-</p>
-                </div>
-                <button type="button" class="btn btn-primary">Book A Demo</button>
-                <button type="button" class="btn btn-danger">Join Course</button>
+              <div class="price-container">
+                  <p class="original-price"><i class="fa fa-inr"></i><s>9,999/-</s></p>
+                  <p class="discounted-price">Starting Price <i class="fa fa-inr"></i>499/-</p>
               </div>
-          </section>
+              
+    
+         
+    
+    <div class="buttons-container">
+      <button type="button" class="btn btn-primary">Book A Demo</button>
+      <button type="button" class="btn btn-danger">Join Service</button>
+    </div>
+         
+          <div class="service-includes-container">
+              <div class="service-includes">
+                  <h3 class="includes-heading"><strong>What's included :</strong></h3>
+                  <ul class="include-list">
+                      <li class="include-item">✓ Showcase your business profile online</li>
+                      <li class="include-item">✓ Display your products and services</li>
+                      <li class="include-item">✓ Home, Services, Contact Us, and About Us pages</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+    </section>
+    
+    
+    
+     <!-- Semi Dynamic Website Course Section -->
+    <section class="section2">
+      <div class="service-container">
+          <h2 class="service-title">Build Custom Gaming PC</h2>
+          <div class="service-details-container">
+              <div class="container-img">
+                  <img src="images/gpc.png" alt="Semi Dynamic Website Image">
+              </div>
+              <div class="service-details">
+                  <p class="course-description">According to your budget and with latest gaming genaratrion supported pc with latest tools.</p>
+                 </div>
+              <div class="price-container">
+                  <p class="original-price"><i class="fa fa-inr"></i><s>17,999/-</s></p>
+                  <p class="discounted-price">Starting Price <br> Free 5 PS4 and 5 Ps3 Games according to your demand<i class="fa fa-inr"></i>1499/-</p>
+              </div>
+    
+              <div class="buttons-container">
+                  <button type="button" class="btn btn-primary">Book A Demo</button>
+                  <button type="button" class="btn btn-danger">Join Course</button>
+              </div>
+          </div>
+          <div class="service-includes-container">
+              <div class="service-includes">
+                  <h3 class="includes-heading"><strong>What's included :</strong></h3>
+                  <ul class="include-list">
+                      <li class="include-item">✓ Showcase your business profile online</li>
+                      <li class="include-item">✓ Display your products and services</li>
+                      <li class="include-item">✓ Home, Services, Contact Us, and About Us pages</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+    </section>
+    <!-- Dynamic Custom Website Course Section -->
+    <section class="section2">
+      <div class="service-container">
+          <h2 class="service-title">Cafe Configuration </h2>
+          <div class="service-details-container">
+              <div class="container-img">
+                  <img src="images/cafe.png" alt="Dynamic Custom Website Image">
+              </div>
+              <div class="service-details">
+                  <p class="course-description">1 server with Min 4 Client computers Building with networking and configuration .</p>
+                  
+              </div>
+              <div class="price-container">
+                  <p class="original-price"><i class="fa fa-inr"></i><s>17,999/-</s></p>
+                  <p class="discounted-price">Starting Price <i class="fa fa-inr"></i>3999/-</p>
+              </div>
+    
+              <div class="buttons-container">
+                  <button type="button" class="btn btn-primary">Book A Demo</button>
+                  <button type="button" class="btn btn-danger">Join Course</button>
+              </div>
+          </div>
+          <div class="service-includes-container">
+              <div class="service-includes">
+                  <h3 class="includes-heading"><strong>What's included :</strong></h3>
+                  <ul class="include-list">
+                      <li class="include-item">✓ Full access to your website and content</li>
+                      <li class="include-item">✓ Admin panel, user panel, and mobile app</li>
+                      <!-- Add any additional inclusions as needed -->
+                  </ul>
+              </div>
+          </div>
+      </div>
+    </section>
+    
+    <!-- Addons Pages Course Section -->
+    <section class="section2">
+      <div class="service-container">
+          <h2 class="service-title">Call Centre Configuration  </h2>
+          <div class="service-details-container">
+              <div class="container-img">
+                  <img src="images/call.png" alt="Addons Pages Image">
+              </div>
+              <div class="service-details">
+                  <p class="course-description">10 Computers with 
+                    Linux Operating system with VOIP call Configuration.</p>
+              </div>
+              <div class="price-container">
+                  <p class="original-price"><i class="fa fa-inr"></i><s>17,999/-</s></p>
+                  <p class="discounted-price">Starting Price <i class="fa fa-inr"></i>9999/-</p>
+              </div>
+    
+              <div class="buttons-container">
+                  <button type="button" class="btn btn-primary">Book A Demo</button>
+                  <button type="button" class="btn btn-danger">Join Course</button>
+              </div>
+          </div>
+          <div class="service-includes-container">
+              <div class="service-includes">
+                  <h3 class="includes-heading"><strong>What's included :</strong></h3>
+                  <ul class="include-list">
+                      <li class="include-item">✓ Basic Plan: 3 pages, up to 10 Products</li>
+                      <li class="include-item">✓ Starter Package: 5 pages, up to 15 Products</li>
+                      <li class="include-item">✓ Premium bundle: 5 pages, up to 35 Products</li>
+                      <!-- Add any additional inclusions as needed -->
+                  </ul>
+              </div>
+          </div>
+      </div>
+    </section>
+    
 
         <footer>
             <div class="container">

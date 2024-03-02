@@ -34,6 +34,272 @@
     <link href="css/responsive.css" rel="stylesheet" />
 </head>
 <style>
+
+.service-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.service-details-container {
+    margin-top: 20px;
+}
+
+.service-details {
+    text-align: left;
+}
+
+.container-img{
+    margin-top: -8px;
+}
+.detail {
+    margin-bottom: 10px;
+}
+
+.trending {
+    margin-top: 20px;
+}
+
+.btn-trending {
+    background-color: lightgreen;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.price-container {
+    margin-top: 20px;
+}
+
+.original-price {
+    color: red;
+    text-decoration: line-through;
+    font-size:1.2em;
+   
+}
+
+.buttons-container {
+    margin-top: 20px;
+}
+
+.btn-primary,
+.btn-danger {
+    margin-right: 10px;
+}
+
+.service-description {
+    margin-top: 20px;
+    text-align: left;
+    
+}
+
+.camera_type{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.camera-btn0{
+  border: none;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+ font-size: 13px;
+ width: 70px;
+ margin-left: -290px;
+ display: inline-block;
+ margin-top: -10px;
+}
+
+.camera-btn{
+  border: none;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+ font-size: 13px;
+ width: 70px;
+ margin-left: -150px;
+ display: inline-block;
+}
+
+.camera-btn2{
+  border: none;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  font-size: 13px;
+ width: 70px;
+ margin-left: 5px;
+ display: inline-block;
+}
+
+input[type="text"] {
+  border: none;
+}
+.camera_form{
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+ font-size: 13px;
+ width: 170px;
+ margin-left: -280px;
+ display: inline-block;
+ margin-top: -10px;
+}
+
+
+.service-includes-container {
+    text-align: left;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-top: 70px;
+    border-radius: 10px;
+}
+
+
+.quantity1{
+  border: none;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  font-size: 13px;
+ width: 40px;
+ margin-left: -130px;
+ display: inline-block;
+}
+
+.quantity{
+  border: none;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  font-size: 13px;
+ width: 40px;
+ display: inline-block;
+}
+
+.includes-heading {
+    color: #333;
+}
+
+.include-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.include-item {
+    margin-bottom: 10px;
+    color: #555;
+}
+.discounted-price {
+    color: #4CAF50; /* Green color for discounted price */
+    font-weight: bold;
+    font-size: 1.5em; /* Adjust font size */
+} 
+
+
+/* Additional styles for the remaining course sections (Semi Dynamic, Dynamic Custom, Addons Pages) */
+.section2{
+  
+    padding-bottom: 10px;
+}
+.section3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.container-course {
+    max-width: 800px;
+    margin: 20px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.course-title {
+    margin-top: 10px;
+}
+
+.course-description {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.heading-box {
+    margin-top: 20px;
+}
+
+.duration {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.price {
+    color: red;
+    text-decoration: line-through;
+    font-size: 1.2em;
+}
+
+.actual-price {
+    margin-top: 10px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.container{
+  display: block;
+  background-color: white;
+  width: 470px;
+  height: 370px;
+  padding-left: 10px;
+  overflow: hidden;
+}
+
+
+.container-course {
+    max-width: 800px;
+    margin: 20px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.course-title {
+    margin-top: 10px;
+}
+
+.course-description {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.heading-box {
+    margin-top: 20px;
+}
+
+.duration {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.service-title {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+ .main{
+    text-align:center;
+font-size:2em;
+color:white;
+}
   /* Add the following styles to your existing CSS */
   .mobile-navigation {
     display: none;
@@ -159,109 +425,177 @@
             </nav>
         </header>
 
-        <section class="course">
-            <div class="container-sort">
-              <select name="sort_by" id="sort_by">
-                <option value=""> Sort by: Featured </option>
-                <option value="Duration"> Duration </option>
-                <option value="priceAsc">Price - Low to High</option>
-                <option value="priceDesc">Price - High to Low</option>
-              </select>
-            </div>
-          </section>
+        <!-- Course Section -->
+    <section class="course">
+      <div class="container-sort">
+          <select name="sort_by" id="sort_by">
+              <option value="">Sort by: Featured</option>
+              <option value="priceAsc">Price - Low to High</option>
+              <option value="priceDesc">Price - High to Low</option>
+          </select>
+      </div>
+  </section>
 
-        <section class="section2">
-            <h3><a href="#">Security and Surveillance </a></h3>
-            <div class="container-course">
-              <div class="column-course">
-                <div class="container-img">
-                  <img src="images/p1.png" alt="Photo 1">
-                </div>
-                <h2> Level 0 </h2>
-                <p>Start carrier with needy syllabus that can get you a handsome job to build your future this course.</p>
-                  <h5 class="duration"> Duration = 3 Months </h5>
-                <div class="heading-box">
-                  <h6>Trending # 1</h6>
-                </div>
-                <div class="price">
-                  <p><i class="fa fa-inr"></i><s>8999/-</s></p>
-                </div>
-                <div class="actual-price">
-                  <p><i class="fa fa-inr"></i>5999/-</p>
-                </div>
-                <button type="button" class="btn btn-primary">Book A Demo</button>
-                <button type="button" class="btn btn-danger">Join Course</button>
-              </div>
-          </section>
-        <br>
-          <section class="section2">
-            <div class="container-course">
-              <div class="column-course">
-                <div class="container-img">
-                  <img src="images/p3.png" alt="Photo 1">
-                </div>
-                <h2>Level 1 </h2>
-                <p>Start  carrier with needy syllabus that can get you a handsome job to build your future this course.</p>
-                  <h5 class="duration"> Duration = 3 Months </h5>
-                <div class="heading-box">
-                  <h6>Trending # 3</h6>
-                </div>
-                <div class="price">
-                  <p><i class="fa fa-inr"></i><s>17,999/-</s></p>
-                </div>
-                <div class="actual-price">
-                  <p><i class="fa fa-inr"></i>11,999/-</p>
-                </div>
-                <button type="button" class="btn btn-primary">Book A Demo</button>
-                <button type="button" class="btn btn-danger">Join Course</button>
-              </div>
-          </section>
-          <br>
-          <section class="section2">
-            <div class="container-course">
-              <div class="column-course">
-                <div class="container-img">
-                  <img src="images/p3.png" alt="Photo 1">
-                </div>
-                <h2>Level 2 </h2>
-                <p>Start  carrier with needy syllabus that can get you a handsome job to build your future this course.</p>
-                  <h5 class="duration"> Duration = 3 Months </h5>
-                <div class="heading-box">
-                  <h6>Trending # 3</h6>
-                </div>
-                <div class="price">
-                  <p><i class="fa fa-inr"></i><s>17,999/-</s></p>
-                </div>
-                <div class="actual-price">
-                  <p><i class="fa fa-inr"></i>11,999/-</p>
-                </div>
-                <button type="button" class="btn btn-primary">Book A Demo</button>
-                <button type="button" class="btn btn-danger">Join Course</button>
-              </div>
-          </section>
-          <br>
-          <section class="section2">
-            <div class="container-course">
-              <div class="column-course">
-                <div class="container-img">
-                  <img src="images/p3.png" alt="Photo 1">
-                </div>
-                <h2>Level 3 </h2>
-                <p>Start  carrier with needy syllabus that can get you a handsome job to build your future this course.</p>
-                  <h5 class="duration"> Duration = 3 Months </h5>
-                <div class="heading-box">
-                  <h6>Trending # 3</h6>
-                </div>
-                <div class="price">
-                  <p><i class="fa fa-inr"></i><s>17,999/-</s></p>
-                </div>
-                <div class="actual-price">
-                  <p><i class="fa fa-inr"></i>11,999/-</p>
-                </div>
-                <button type="button" class="btn btn-primary">Book A Demo</button>
-                <button type="button" class="btn btn-danger">Join Course</button>
-              </div>
-          </section>
+<!-- Website Development Section -->
+<section class="section2">
+  <h1 style=" margin-bottom: 20px; text-align:center; background-color:#000; color: #fff; padding: 10px; border-radius: 10px;">Security & Serveillance</h1>
+  <div class="service-container">
+      <h2 class="service-title">CCTV Camera Installation </h2>
+      <div class="service-details-container">
+          <div class="container-img">
+              <img src="images/cctv.png" alt="Static Website Image" class="service-image">
+          </div>
+          <div class="container">
+        <p class="camera_type">Camera Technology Type:</p>
+        <button class="camera-btn0">Analogue</button>
+        <button class="camera-btn2"> Digital</button>
+      
+        <p class="camera_type">Select Quantity Upto Estimated</p>
+        <button class="quantity1">4</button>
+        <button class="quantity"> 8</button>
+        <button class="quantity">16</button>
+        <button class="quantity"> 32</button>
+        <button class="quantity">64</button>
+        <button class="quantity"> 128</button>
+        <button class="quantity">256</button>
+        
+        <p class="camera_type"> Installation Type:</p>
+        <button class="camera-btn">Home</button>
+        <button class="camera-btn2"> School</button>
+        <button class="camera-btn2"> Complex</button>
+        <button class="camera-btn2"> Restaurant</button>
+        
+        <p class="camera_type"> Mobile Number:</p>
+        <form class="camera_form">
+        <input type="text" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}"
+          title="Please enter a valid 10-digit phone number" placeholder="10-digit Mobile (Required)"
+          required />
+    </form>
+        
+<div class="buttons-container">
+  <button type="button" class="btn btn-primary">Book A Demo</button>
+  <button type="button" class="btn btn-danger">Join Service</button>
+</div>
+</div>
+      <div class="service-includes-container">
+          <div class="service-includes">
+              <h3 class="includes-heading"><strong>What's included :</strong></h3>
+              <ul class="include-list">
+                  <li class="include-item">✓ Showcase your business profile online</li>
+                  <li class="include-item">✓ Display your products and services</li>
+                  <li class="include-item">✓ Home, Services, Contact Us, and About Us pages</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+  </div>
+</section>
+
+
+
+ <!-- Semi Dynamic Website Course Section -->
+<section class="section2">
+  <div class="service-container">
+      <h2 class="service-title">Semi Dynamic Website</h2>
+      <div class="service-details-container">
+          <div class="container-img">
+              <img src="images/sdw.png" alt="Semi Dynamic Website Image">
+          </div>
+          <div class="service-details">
+              <p class="course-description">Present your business online and drive footfall with a Semi Dynamic Website. Visitors can easily contact you via the website, and all social media handles will be linked. This mobile-accessible website offers all the benefits of a static site plus extra services, up to 20 products, mobile view, and social media handle attachments.</p>
+             </div>
+          <div class="price-container">
+              <p class="original-price"><i class="fa fa-inr"></i><s>17,999/-</s></p>
+              <p class="discounted-price">Starting Price <i class="fa fa-inr"></i>9,999/-</p>
+          </div>
+
+          <div class="buttons-container">
+              <button type="button" class="btn btn-primary">Book A Demo</button>
+              <button type="button" class="btn btn-danger">Join Course</button>
+          </div>
+      </div>
+      <div class="service-includes-container">
+          <div class="service-includes">
+              <h3 class="includes-heading"><strong>What's included :</strong></h3>
+              <ul class="include-list">
+                  <li class="include-item">✓ Showcase your business profile online</li>
+                  <li class="include-item">✓ Display your products and services</li>
+                  <li class="include-item">✓ Home, Services, Contact Us, and About Us pages</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- Dynamic Custom Website Course Section -->
+<section class="section2">
+  <div class="service-container">
+      <h2 class="service-title">Dynamic Custom Website</h2>
+      <div class="service-details-container">
+          <div class="container-img">
+              <img src="images/fdw.png" alt="Dynamic Custom Website Image">
+          </div>
+          <div class="service-details">
+              <p class="course-description">Take control of your website with the Dynamic Custom Website course. You'll have full access to your website and content, enabling you to add or remove products. This fully-featured website includes all the benefits of a semi-dynamic site plus an admin panel, user panel, and mobile app.</p>
+              
+          </div>
+          <div class="price-container">
+              <p class="original-price"><i class="fa fa-inr"></i><s>17,999/-</s></p>
+              <p class="discounted-price">Starting Price <i class="fa fa-inr"></i>49,999/-</p>
+          </div>
+
+          <div class="buttons-container">
+              <button type="button" class="btn btn-primary">Book A Demo</button>
+              <button type="button" class="btn btn-danger">Join Course</button>
+          </div>
+      </div>
+      <div class="service-includes-container">
+          <div class="service-includes">
+              <h3 class="includes-heading"><strong>What's included :</strong></h3>
+              <ul class="include-list">
+                  <li class="include-item">✓ Full access to your website and content</li>
+                  <li class="include-item">✓ Admin panel, user panel, and mobile app</li>
+                  <!-- Add any additional inclusions as needed -->
+              </ul>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Addons Pages Course Section -->
+<section class="section2">
+  <div class="service-container">
+      <h2 class="service-title">Addons Pages</h2>
+      <div class="service-details-container">
+          <div class="container-img">
+              <img src="images/amc.png" alt="Addons Pages Image">
+          </div>
+          <div class="service-details">
+              <p class="course-description">Start your career with a course that offers a syllabus tailored to secure a promising job and build your future. This comprehensive course comes with multiple plans to suit your needs.</p>
+          </div>
+          <div class="price-container">
+              <p class="original-price"><i class="fa fa-inr"></i><s>17,999/-</s></p>
+              <p class="discounted-price">Starting Price <i class="fa fa-inr"></i>49,999/-</p>
+          </div>
+
+          <div class="buttons-container">
+              <button type="button" class="btn btn-primary">Book A Demo</button>
+              <button type="button" class="btn btn-danger">Join Course</button>
+          </div>
+      </div>
+      <div class="service-includes-container">
+          <div class="service-includes">
+              <h3 class="includes-heading"><strong>What's included :</strong></h3>
+              <ul class="include-list">
+                  <li class="include-item">✓ Basic Plan: 3 pages, up to 10 Products</li>
+                  <li class="include-item">✓ Starter Package: 5 pages, up to 15 Products</li>
+                  <li class="include-item">✓ Premium bundle: 5 pages, up to 35 Products</li>
+                  <!-- Add any additional inclusions as needed -->
+              </ul>
+          </div>
+      </div>
+  </div>
+</section>
+
 
         <footer>
             <div class="container">
