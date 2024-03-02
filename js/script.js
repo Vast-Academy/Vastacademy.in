@@ -88,8 +88,8 @@
   
   const buttonsInfo = [
     { text: "Website Model 1", url: "index.html" },
-    { text: "Website Model 2", url: "https://vacomputers.com/" },
-    { text: "Website Model 3", url: "https://vast-academy.github.io/model3.github.io/" }
+    { text: "Website Model 2", url: "model2/index.html" },
+    { text: "Website Model 3", url: "model3/index.html" }
   ];
 
   // Function to create buttons dynamically
