@@ -87,25 +87,95 @@
   // });
   
   const buttonsInfo = [
-    { text: "Website Model 1", url: "index.html" },
-    { text: "Website Model 2", url: "model2/index.html" },
-    { text: "Website Model 3", url: "model3/index.html" }
+    { text: "Website Model 1", url: "../model1/index.html" },
+    { text: "Website Model 2", url: "../model2/index.html" },
+    { text: "Website Model 3", url: "../model3/index.html" }
+    
   ];
 
-  // Function to create buttons dynamically
-  function createButtons() {
-    const container = document.querySelector('.fixed-buttons');
+   // Function to create buttons dynamically
+   function createButtons() {
+    const container = document.createElement('div');
+    container.classList.add('fixed-buttons');
+    container.style.position = 'fixed';
+    container.style.top = '85%';
+    container.style.left = '50%';
+    container.style.transform = 'translate(-50%, -50%)';
+    container.style.zIndex = '9999'; 
+    container.style.display = 'flex';
+    container.style.justifyContent = 'center';
+    container.style.margin = '10px';
     
     buttonsInfo.forEach(button => {
       const buttonElement = document.createElement('button');
       buttonElement.textContent = button.text;
-      buttonElement.className = 'button';
+      buttonElement.style.display = 'block';
+      buttonElement.style.width = '200px';
+      buttonElement.style.height = '40px';
+      buttonElement.style.marginBottom = '10px';
+      buttonElement.style.margin = '20px';
+      buttonElement.style.backgroundColor = 'white';
+      buttonElement.style.boxShadow = '3px 3px 3px 4px rgba(0, 0, 0, 0.3)';
+      buttonElement.style.transition = 'background-color 0.3s ease, box-shadow 0.3s ease';
+      buttonElement.style.color = 'black';
+      buttonElement.style.border = 'none';
+      buttonElement.style.cursor = 'pointer';
+      buttonElement.style.transition = 'background-color 0.3s ease';
+      buttonElement.style.fontSize = '20px';
+      buttonElement.style.fontWeight = 'bold';
+
       buttonElement.addEventListener('click', () => {
         window.location.href = button.url;
       });
+
+      // Button hover effect
+      buttonElement.addEventListener('mouseover', () => {
+        buttonElement.style.backgroundColor = '#0E2E50';
+        buttonElement.style.boxShadow = '0px 4px 8px rgba(0, 0, 0, 0.3)';
+        buttonElement.style.color = 'white';
+      });
+
+      buttonElement.addEventListener('mouseout', () => {
+        buttonElement.style.backgroundColor = 'white';
+        buttonElement.style.boxShadow = '3px 3px 3px 4px rgba(0, 0, 0, 0.3)';
+        buttonElement.style.color = 'black';
+      });
+
       container.appendChild(buttonElement);
     });
-  }
 
+    document.body.appendChild(container);
+
+    // Create "Select Model" button
+    const selectModelButton = document.createElement('button');
+    selectModelButton.textContent = "Select This Model";
+    selectModelButton.style.position = 'fixed';
+    selectModelButton.style.top = '70%';
+    selectModelButton.style.left = '50%';
+    selectModelButton.style.transform = 'translate(-50%, -50%)';
+    selectModelButton.style.width = '200px';
+    selectModelButton.style.height = '40px';
+    selectModelButton.style.backgroundColor = 'white';
+    selectModelButton.style.boxShadow = '3px 3px 3px 4px rgba(0, 0, 0, 0.3)';
+    selectModelButton.style.transition = 'background-color 0.3s ease, box-shadow 0.3s ease';
+    selectModelButton.style.color = 'black';
+    selectModelButton.style.border = 'none';
+    selectModelButton.style.cursor = 'pointer';
+    selectModelButton.style.transition = 'background-color 0.3s ease';
+    selectModelButton.style.fontSize = '20px';
+    selectModelButton.style.fontWeight = 'bold';
+
+    // Add event listener for "Select Model" button
+    selectModelButton.addEventListener('click', () => {
+        // Your logic for handling the "Select Model" button click goes here
+        console.log("Select Model button clicked");
+    });
+
+    // Append "Select Model" button to the body
+    document.body.appendChild(selectModelButton);
+}
+  
+
+  
   // Call the function to create buttons when the page loads
   document.addEventListener('DOMContentLoaded', createButtons);
