@@ -39,7 +39,7 @@
 <style>
     .service-container {
       max-width: 800px;
-      height: 600px;
+      height: 350px;
       margin: 0 auto;
       text-align: center;
       margin-top: 20px;
@@ -57,131 +57,54 @@
    }
   
    .buttons-container{
-    margin-top: 110px;
+    margin-top: 20px;
+    margin-bottom: 10px;
    }
-
-   *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} 
-
+   
    .main{
+    max-width: 500px;
+    height: 70px;
+    border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: pop;
-    flex-direction: column;
-}
+   }
 
-.main ul{
+  .main ul {
     display: flex;
-    margin-top: 80px;
-}
-.main ul li{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.main ul li .icon{
-    font-size: 35px;
-    color: #ff4732;
-    margin: 0 60px;
-}
-.main ul li .text{
-    font-size: 14px;
-    font-weight: 600;
-    color: #ff4732;
+    list-style-type: none;
+    padding: 0;
 }
 
-/* Progress Div Css  */
+.main li {
+    flex: 1;
+    text-align: center;
+}
 
- ul li .progress{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: rgba(68, 68, 68, 0.781);
-    margin: 14px 0;
-    display: grid;
-    place-items: center;
-    color: #fff;
+.icon {
+    font-size: 24px; /* Adjust icon size as needed */
+}
+
+.progress {
     position: relative;
-    cursor: pointer;
 }
- .progress::after{
-    content: " ";
+
+.progress p {
+    font-size: 18px; /* Adjust size of step number */
+}
+
+.progress i {
     position: absolute;
-    width: 125px;
-    height: 5px;
-    background-color: rgba(68, 68, 68, 0.781);
-    right: 30px;
-}
- .one::after{
-    width: 0;
-    height: 0;
-}
-ul li .progress .uil{
-    display: none;
-}
-ul li .progress p{
-    font-size: 13px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px; /* Adjust size of checkmark icon */
 }
 
-/* Active Css  */
-
- ul li .active{
-    background-color: #ff4732;
-    display: grid;
-    place-items: center;
-}
-li .active::after{
-    background-color: #ff4732;
-}
-ul li .active p{
-    display: none;
-}
-ul li .active .uil{
-    font-size: 20px;
-    display: flex;
+.text {
+    margin-top: 5px; /* Adjust spacing between text and progress */
 }
 
-/* Responsive Css  */
-
-@media (max-width: 980px) {
-    ul{
-        flex-direction: column;
-    }
-    ul li{
-        flex-direction: row;
-    }
-    ul li .progress{
-        margin: 0 30px;
-    }
-    .progress::after{
-        width: 5px;
-        height: 55px;
-        bottom: 30px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: -1;
-    }
-    .one::after{
-        height: 0;
-    }
-    ul li .icon{
-        margin: 15px 0;
-    }
-}
-
-@media (max-width:600px) {
-    .head .head_1{
-        font-size: 24px;
-    }
-    .head .head_2{
-        font-size: 16px;
-    }
-}
    </style>
 
 <body>
@@ -266,7 +189,7 @@ ul li .active .uil{
 
       <section>
         <div class="service-container">
-          <a href="real-estate-html-template/index.html"> <h2 class="service-title">Shree Lakshami Narayan Ayurvedic College</h2></a>
+          <a href="model1/index.html"> <h2 class="service-title">Shree Lakshami Narayan Ayurvedic College</h2></a>
           <div class="service-details-container">
               <div class="container-img1">
                   <img src="images/snac.jpg" alt="Static Website Image" class="service-image" width="250px">
@@ -319,9 +242,25 @@ ul li .active .uil{
                         <p class="text">Order Arrived</p>
                     </li>
                 </ul>        
+              </div>
+              <div class="buttons-container">
+                <a href="model1/index.html"><button type="button" class="btn btn-danger">Check Website Models</button></a>
             </div>
-        
+      </section>
 
+      <section>
+        <div class="service-container">
+          <a href="real-estate-html-template/index.html"> <h2 class="service-title">3G Digital</h2></a>
+          <div class="service-details-container">
+              <div class="container-img1">
+                  <img src="images/snac.jpg" alt="Static Website Image" class="service-image" width="250px">
+              </div>
+              <div class="service-details">
+              </div>
+              <div class="service-description">
+                  <p>Transform your business presence with our Static Website Development Service that showcases your business profile online, displays your products and services, and includes essential pages like Home, Services, Contact Us, and About Us.</p>
+              </div>
+              <div class="main"></div>
               <div class="buttons-container">
                 <a href="model1/index.html"><button type="button" class="btn btn-danger">Check Website Models</button></a>
             </div>
